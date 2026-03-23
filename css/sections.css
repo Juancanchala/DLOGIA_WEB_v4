@@ -386,32 +386,63 @@
 .proc-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
-  border-radius: var(--r-lg);
-  overflow: hidden;
-  margin-top: 56px;
+  gap: 16px;
+  margin-top: 72px;
+  position: relative;
+}
+/* Línea conectora gradiente */
+.proc-grid::before {
+  content: '';
+  position: absolute;
+  top: -36px;
+  left: calc(12.5% - 1px);
+  right: calc(12.5% - 1px);
+  height: 1px;
+  background: linear-gradient(90deg,
+    var(--accent) 0%,
+    var(--teal)   33%,
+    var(--coral)  66%,
+    var(--amber)  100%
+  );
+  z-index: 0;
 }
 .proc-step {
-  background: var(--bg);
-  padding: 32px 24px;
-  transition: background var(--t-base);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 24px 20px;
+  position: relative;
+  transition: border-color var(--t-base), transform var(--t-base);
 }
-.proc-step:hover { background: var(--surface); }
+.proc-step:hover { border-color: var(--borderH); transform: translateY(-3px); }
+/* Burbuja del número sobre la línea */
 .proc-num {
+  position: absolute;
+  top: -52px;
+  left: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1.5px solid var(--borderH);
   font-family: var(--fd);
-  font-size: 46px;
-  font-weight: 800;
-  color: rgba(255,255,255,0.04);
-  line-height: 1;
-  margin-bottom: 12px;
-  letter-spacing: -0.04em;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0;
+  z-index: 1;
 }
-.proc-dot { width: 7px; height: 7px; border-radius: 50%; margin-bottom: 16px; }
+.proc-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
 .proc-title {
   font-family: var(--fd);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--text);
   margin-bottom: 8px;
@@ -579,7 +610,8 @@ footer {
   .srv-grid { grid-template-columns: 1fr; }
   .port-grid { grid-template-columns: 1fr; }
   .price-grid { grid-template-columns: 1fr; }
-  .proc-grid { grid-template-columns: 1fr 1fr; }
+  .proc-grid { grid-template-columns: 1fr 1fr; margin-top: 80px; }
+  .proc-grid::before { left: calc(25% - 1px); right: calc(25% - 1px); }
   .testi-grid { grid-template-columns: 1fr; }
   .achv-grid { grid-template-columns: repeat(3, 1fr); }
   footer { flex-direction: column; gap: 10px; text-align: center; padding: 20px; }
