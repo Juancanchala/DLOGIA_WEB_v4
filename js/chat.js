@@ -5,8 +5,6 @@
    Requires: CONFIG.OPENAI_KEY set in config.js
 ═══════════════════════════════════════════ */
 
-import { CONFIG } from './config.js';
-
 // ── D'LOGIA system prompt ──────────────────
 const SYSTEM_PROMPT = `Eres el asistente virtual de D'LOGIA, la marca de Juan Camilo Canchala — Data & AI Engineer en Medellín, Colombia.
 
@@ -161,30 +159,22 @@ async function handleSend() {
   chatInput.focus();
 }
 
-// ── OpenAI call ────────────────────────────
+// ── OpenAI call (via Netlify Function) ─────
 async function callOpenAI() {
   const messages = [
     { role: 'system', content: SYSTEM_PROMPT },
-    ...conversationHistory.slice(-12), // last 12 messages for context
+    ...conversationHistory.slice(-12),
   ];
 
-  const res = await fetch('https://api.openai.com/v1/chat/completions', {
+  const res = await fetch('/.netlify/functions/chat', {
     method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${CONFIG.OPENAI_KEY}`,
-    },
-    body: JSON.stringify({
-      model: 'gpt-4o-mini',
-      messages,
-      max_tokens: 300,
-      temperature: 0.7,
-    }),
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ messages }),
   });
 
-  if (!res.ok) throw new Error(`OpenAI error: ${res.status}`);
+  if (!res.ok) throw new Error(`Error: ${res.status}`);
   const data = await res.json();
-  return data.choices[0].message.content;
+  return data.reply;
 }
 
 // ── Render helpers ─────────────────────────
