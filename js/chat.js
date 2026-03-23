@@ -42,6 +42,7 @@ Diagnóstico → Diseño (apruebas todo antes de escribir código) → Construcc
 - Contacto WhatsApp: +57 312 494 2672`;
 
 // ── State ──────────────────────────────────
+const CHAT_VERSION = 'v2'; // bump this to clear all stored conversations
 let conversationHistory = [];
 let leadData = { name: null, email: null, need: null };
 let isOpen = false;
@@ -60,14 +61,18 @@ export function initChat() {
 
   if (!chatBtn) return;
 
-  // Load history from localStorage
+  // Load history from localStorage (only if version matches)
   const saved = localStorage.getItem('dlogia_chat');
   if (saved) {
     try {
-      const { history, lead } = JSON.parse(saved);
-      conversationHistory = history || [];
-      leadData = lead || leadData;
-    } catch(e) { /* ignore */ }
+      const { history, lead, version } = JSON.parse(saved);
+      if (version === CHAT_VERSION) {
+        conversationHistory = history || [];
+        leadData = lead || leadData;
+      } else {
+        localStorage.removeItem('dlogia_chat');
+      }
+    } catch(e) { localStorage.removeItem('dlogia_chat'); }
   }
 
   // Toggle window
@@ -264,6 +269,7 @@ function detectBuyIntent(text) {
 function saveHistory() {
   try {
     localStorage.setItem('dlogia_chat', JSON.stringify({
+      version: CHAT_VERSION,
       history: conversationHistory.slice(-20),
       lead: leadData,
     }));
