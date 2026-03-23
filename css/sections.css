@@ -522,9 +522,30 @@ footer {
   font-weight: 800;
   color: var(--muted);
   letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 .f-logo .apostrophe { color: var(--accent); }
+.f-socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.f-socials a {
+  color: var(--dim);
+  transition: color var(--t-fast), transform var(--t-fast);
+  display: flex;
+}
+.f-socials a:hover { color: var(--text); transform: translateY(-2px); }
+.f-socials a[aria-label="WhatsApp"]:hover { color: #25D366; }
+.f-socials a[aria-label="LinkedIn"]:hover  { color: #0A66C2; }
 .f-copy { font-size: 12px; color: var(--dim); }
+
+/* Nav logo image */
+.nav-logo { display: flex; align-items: center; gap: 8px; }
+.nav-logo-img { height: 28px; width: auto; object-fit: contain; }
+.nav-logo-text { display: flex; align-items: center; gap: 1px; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 920px) {
