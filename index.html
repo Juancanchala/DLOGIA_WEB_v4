@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="D'LOGIA — Convertimos tus datos en decisiones con IA. Dashboards, automatización y agentes inteligentes para empresas en Colombia.">
+  <meta name="keywords" content="Data Engineer Medellín, Power BI Colombia, Automatización IA, Consultoría datos, Dashboard empresarial">
+  <meta property="og:title" content="D'LOGIA | Datos, Lógica & IA">
+  <meta property="og:description" content="Convierte tus datos en decisiones con IA — en días, no meses.">
+  <meta property="og:url" content="https://dlogia.tech">
+  <title>D'LOGIA | Datos, Lógica & Inteligencia Artificial</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+
+<!-- Global particle background -->
+<canvas id="particle-canvas"></canvas>
+
+<!-- ══════════════════════════════════
+     NAVIGATION
+══════════════════════════════════ -->
+<nav id="nav">
+  <a href="#" class="nav-logo">D<span class="apostrophe">'</span>LOGIA</a>
+
+  <ul class="nav-links">
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#portafolio">Portafolio</a></li>
+    <li><a href="#precios">Precios</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+
+  <a href="https://wa.me/573124942672?text=Hola%20Juan%20Camilo%2C%20quiero%20agendar%20una%20consulta%20gratuita"
+     class="nav-cta" target="_blank">Consulta gratis</a>
+
+  <button class="nav-hamburger" aria-label="Menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile menu -->
+<nav class="nav-mobile">
+  <a href="#sobre-mi">Sobre mí</a>
+  <a href="#servicios">Servicios</a>
+  <a href="#portafolio">Portafolio</a>
+  <a href="#precios">Precios</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+
+<!-- ══════════════════════════════════
+     HERO
+══════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow hero-glow--1"></div>
+  <div class="hero-glow hero-glow--2"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Disponible para proyectos</div>
+
+    <h1 class="hero-title">
+      <span class="t1">Convierte tus datos</span>
+      <span class="t2">en decisiones con IA</span>
+      <span class="t3">— en días, no meses.</span>
+    </h1>
+
+    <p class="hero-sub">
+      Dashboards, <strong>automatización y agentes inteligentes</strong> para empresas que quieren dejar de operar a ciegas y tomar decisiones con información real.
+    </p>
+
+    <!-- Segmentation -->
+    <div class="hero-segment">
+      <div class="hero-segment__label">¿Reconoces tu empresa aquí?</div>
+      <div class="hero-segment__item">
+        <div class="hero-segment__check">
+          <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+            <path d="M1 4l3 3 5-6" stroke="#00d4aa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        Tu información está en Excel y nadie sabe qué pasa en tiempo real
+      </div>
+      <div class="hero-segment__item">
+        <div class="hero-segment__check">
+          <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+            <path d="M1 4l3 3 5-6" stroke="#00d4aa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        Tu equipo pierde horas en reportes manuales que podrían ser automáticos
+      </div>
+      <div class="hero-segment__item">
+        <div class="hero-segment__check">
+          <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+            <path d="M1 4l3 3 5-6" stroke="#00d4aa" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        Tienes datos dispersos pero no los estás usando para tomar decisiones
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="https://wa.me/573124942672?text=Hola%20Juan%20Camilo%2C%20quiero%20saber%20c%C3%B3mo%20organizar%20mis%20datos%20y%20automatizar%20mi%20operaci%C3%B3n"
+         class="btn btn--primary" target="_blank">
+        Te digo en 30 min cómo mejorar tu operación
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+          <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="#portafolio" class="btn btn--ghost">Ver casos reales</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat__num">93<span class="accent">%</span></div>
+        <div class="stat__label">menos tiempo en procesos manuales</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">8<span class="accent">+</span></div>
+        <div class="stat__label">años construyendo soluciones de datos</div>
+      </div>
+      <div class="stat">
+        <div class="stat__num">15<span class="accent">+</span></div>
+        <div class="stat__label">proyectos entregados y en producción</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     SOBRE MÍ
+══════════════════════════════════ -->
+<section class="section" id="sobre-mi">
+  <div class="inner">
+    <span class="stag">Quién está detrás</span>
+    <h2 class="stitle">Ingeniero que hace que<br><em>los datos trabajen para ti.</em></h2>
+
+    <div class="about-grid">
+      <!-- Avatar -->
+      <div style="position:relative">
+        <div class="avatar-frame">
+          <div class="avatar-initials">JC</div>
+          <div class="avatar-name">Juan Camilo C.</div>
+        </div>
+        <div class="avatar-badge">✦ Disponible</div>
+      </div>
+
+      <!-- Content -->
+      <div>
+        <p class="about-lead">
+          Soy <strong>Juan Camilo Canchala</strong>, Data & AI Engineer con base en Medellín. Ayudo a empresas a organizar sus datos, automatizar procesos y tomar decisiones con IA —
+          <strong>sin necesidad de cambiar toda su operación.</strong>
+        </p>
+        <p class="about-role">Lean Six Sigma Green Belt · Data Engineer · AI Developer · 8+ años de experiencia</p>
+
+        <div class="achv-grid">
+          <div class="achv">
+            <div class="achv__num">93%</div>
+            <div class="achv__label">reducción en procesamiento de facturas</div>
+          </div>
+          <div class="achv">
+            <div class="achv__num">147K+</div>
+            <div class="achv__label">registros procesados en pipelines</div>
+          </div>
+          <div class="achv">
+            <div class="achv__num">LSS</div>
+            <div class="achv__label">Green Belt · optimización de procesos</div>
+          </div>
+        </div>
+
+        <div class="pills">
+          <span class="pill">Python</span>
+          <span class="pill">Power BI</span>
+          <span class="pill">Apache Airflow</span>
+          <span class="pill">FastAPI</span>
+          <span class="pill">BigQuery</span>
+          <span class="pill">Azure / M365</span>
+          <span class="pill">LangChain</span>
+          <span class="pill">CrewAI</span>
+          <span class="pill">React</span>
+          <span class="pill">PySpark</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     SERVICIOS
+══════════════════════════════════ -->
+<section class="section section--alt" id="servicios">
+  <div class="inner">
+    <span class="stag">Qué resuelvo</span>
+    <h2 class="stitle">No vendo tecnología.<br><em>Entrego resultados.</em></h2>
+
+    <div class="srv-grid">
+      <div class="srv-card">
+        <div class="srv-icon srv-icon--p">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect x="2" y="2" width="7" height="7" rx="2" fill="#6c63ff"/>
+            <rect x="11" y="2" width="7" height="7" rx="2" fill="#6c63ff" opacity=".5"/>
+            <rect x="2" y="11" width="7" height="7" rx="2" fill="#6c63ff" opacity=".5"/>
+            <rect x="11" y="11" width="7" height="7" rx="2" fill="#6c63ff" opacity=".3"/>
+          </svg>
+        </div>
+        <h3 class="srv-title">Visibilidad de tu negocio</h3>
+        <p class="srv-result">Centralizamos toda tu información para que tengas <strong>visibilidad en tiempo real</strong> — sin depender de Excel ni de reportes que llegan tarde.</p>
+        <p class="srv-tech">Pipelines ETL · Power BI · Airflow · PySpark · BigQuery · Microsoft Fabric</p>
+      </div>
+
+      <div class="srv-card">
+        <div class="srv-icon srv-icon--t">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="5" r="3" fill="#00d4aa"/>
+            <path d="M4 18c0-3.314 2.686-6 6-6s6 2.686 6 6" stroke="#00d4aa" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <circle cx="16" cy="10" r="2" fill="#00d4aa" opacity=".5"/>
+          </svg>
+        </div>
+        <h3 class="srv-title">Operación sin tareas manuales</h3>
+        <p class="srv-result">Automatizamos los procesos repetitivos con IA para que <strong>el tiempo se use en lo que realmente importa</strong>, no en copiar y pegar datos.</p>
+        <p class="srv-tech">LLMs · Agentes IA · LangChain · CrewAI · FastAPI · RPA · n8n</p>
+      </div>
+
+      <div class="srv-card">
+        <div class="srv-icon srv-icon--c">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M3 14l4-4 3 3 4-5 3 3" stroke="#ff6b6b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <rect x="2" y="2" width="16" height="16" rx="3" stroke="#ff6b6b" stroke-width="1.2" fill="none" opacity=".4"/>
+          </svg>
+        </div>
+        <h3 class="srv-title">Estrategia de datos clara</h3>
+        <p class="srv-result">Si no sabes por dónde empezar, hacemos el diagnóstico y te entregamos un <strong>roadmap concreto</strong> de qué implementar, en qué orden y con qué impacto.</p>
+        <p class="srv-tech">Auditoría de madurez · KPIs · Arquitectura · Roadmap · Lean Six Sigma</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     PORTAFOLIO
+══════════════════════════════════ -->
+<section class="section" id="portafolio">
+  <div class="inner">
+    <span class="stag">Casos reales</span>
+    <h2 class="stitle">Proyectos con problema,<br><em>solución y resultado.</em></h2>
+
+    <div class="port-filters">
+      <button class="fbtn active" data-filter="all">Todos</button>
+      <button class="fbtn" data-filter="data">Data Engineering</button>
+      <button class="fbtn" data-filter="ia">IA</button>
+      <button class="fbtn" data-filter="automatizacion">Automatización</button>
+    </div>
+
+    <div class="port-grid">
+
+      <!-- Card 1 -->
+      <div class="pcard" data-type="automatizacion">
+        <div class="pcard__thumb thumb--orange">
+          <div class="pcard__bg-text">93%</div>
+          <span class="pcard__impact">93% más rápido</span>
+          <span class="pcard__type">Automatización</span>
+        </div>
+        <div class="pcard__body">
+          <h4 class="pcard__title">Sistema de Facturación con IA</h4>
+          <div class="psr">
+            <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">Proceso manual de <strong>8 horas</strong> por ciclo de facturación</span></div>
+            <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">Automatización con IA: extracción, validación y carga automática</span></div>
+            <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Ciclo reducido a <strong>30 min — 93% menos tiempo</strong></span></div>
+          </div>
+          <div class="ptags"><span class="ptag">Python</span><span class="ptag">FastAPI</span><span class="ptag">OCR</span></div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="pcard" data-type="data">
+        <div class="pcard__thumb thumb--purple">
+          <div class="pcard__bg-text">GOLD</div>
+          <span class="pcard__impact">Demo en vivo</span>
+          <span class="pcard__type">Data Engineering</span>
+        </div>
+        <div class="pcard__body">
+          <h4 class="pcard__title">Gold Analytics System</h4>
+          <div class="psr">
+            <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">Datos del mercado del oro dispersos sin análisis centralizado</span></div>
+            <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">Pipeline end-to-end: extracción, transformación y visualización</span></div>
+            <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Sistema en producción con <strong>insights en tiempo real</strong></span></div>
+          </div>
+          <div class="ptags"><span class="ptag">Python</span><span class="ptag">ETL</span><span class="ptag">Analytics</span></div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="pcard" data-type="ia">
+        <div class="pcard__thumb thumb--teal">
+          <div class="pcard__bg-text">CRM</div>
+          <span class="pcard__impact">En producción</span>
+          <span class="pcard__type">IA</span>
+        </div>
+        <div class="pcard__body">
+          <h4 class="pcard__title">CRM Inmobiliario con IA</h4>
+          <div class="psr">
+            <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">Gestión manual de leads sin visibilidad del pipeline de ventas</span></div>
+            <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">CRM completo con IA integrada para clasificar y priorizar leads</span></div>
+            <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Plataforma desplegada, <strong>pipeline 100% visible</strong></span></div>
+          </div>
+          <div class="ptags"><span class="ptag">React</span><span class="ptag">LLM</span><span class="ptag">Netlify</span></div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="pcard" data-type="data">
+        <div class="pcard__thumb thumb--purple">
+          <div class="pcard__bg-text">147K</div>
+          <span class="pcard__impact">147K+ registros</span>
+          <span class="pcard__type">Data Engineering</span>
+        </div>
+        <div class="pcard__body">
+          <h4 class="pcard__title">Pipeline Salary Analytics</h4>
+          <div class="psr">
+            <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">147K+ registros sin arquitectura para análisis escalable</span></div>
+            <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">Pipeline orquestado Airflow + PySpark + BigQuery</span></div>
+            <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Procesamiento <strong>enterprise listo para producción</strong></span></div>
+          </div>
+          <div class="ptags"><span class="ptag">Airflow</span><span class="ptag">PySpark</span><span class="ptag">BigQuery</span></div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="pcard" data-type="ia">
+        <div class="pcard__thumb thumb--teal">
+          <div class="pcard__bg-text">RAG</div>
+          <span class="pcard__impact">Real-time</span>
+          <span class="pcard__type">IA</span>
+        </div>
+        <div class="pcard__body">
+          <h4 class="pcard__title">Dilo English Coach</h4>
+          <div class="psr">
+            <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">Entrenamiento de inglés sin feedback personalizado en tiempo real</span></div>
+            <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">Asistente IA con Speech-to-Text y análisis de respuesta</span></div>
+            <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Demo en producción con <strong>feedback instantáneo</strong></span></div>
+          </div>
+          <div class="ptags"><span class="ptag">React</span><span class="ptag">OpenAI</span><span class="ptag">Speech</span></div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="pcard" data-type="data">
+        <div class="pcard__thumb thumb--orange">
+          <div class="pcard__bg-text">CDC</div>
+          <span class="pcard__impact">Enterprise</span>
+          <span class="pcard__type">Data Engineering</span>
+        </div>
+        <div class="pcard__body">
+          <h4 class="pcard__title">CDC Real-time con Kafka</h4>
+          <div class="psr">
+            <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">Bases de datos sin sincronización en tiempo real entre sistemas</span></div>
+            <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">Change Data Capture con MySQL, Debezium y Kafka</span></div>
+            <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Sincronización <strong>enterprise de alta disponibilidad</strong></span></div>
+          </div>
+          <div class="ptags"><span class="ptag">Kafka</span><span class="ptag">MySQL</span><span class="ptag">CDC</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     PRECIOS
+══════════════════════════════════ -->
+<section class="section section--alt" id="precios">
+  <div class="inner">
+    <span class="stag">Soluciones listas para implementar</span>
+    <h2 class="stitle">Inversión clara<br><em>desde el día uno.</em></h2>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price-icon">📊</div>
+        <div class="price-name">Dashboard + BI</div>
+        <div class="price-amount">Desde <span>1M</span> COP</div>
+        <div class="price-time">Entrega en 5–10 días</div>
+        <ul class="price-items">
+          <li>Dashboard ejecutivo en Power BI</li>
+          <li>Conexión a tus fuentes de datos</li>
+          <li>KPIs definidos contigo</li>
+          <li>Capacitación incluida</li>
+        </ul>
+        <a href="https://wa.me/573124942672?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Dashboard%20%2B%20BI" class="price-cta" target="_blank">Solicitar información</a>
+      </div>
+
+      <div class="price-card price-card--featured">
+        <div class="price-badge">MÁS SOLICITADO</div>
+        <div class="price-icon">🤖</div>
+        <div class="price-name">Automatización con IA</div>
+        <div class="price-amount">Desde <span>2M</span> COP</div>
+        <div class="price-time">Entrega en 10–20 días</div>
+        <ul class="price-items">
+          <li>Análisis del proceso a automatizar</li>
+          <li>Desarrollo e integración completa</li>
+          <li>Agente IA o pipeline automatizado</li>
+          <li>Pruebas y documentación</li>
+        </ul>
+        <a href="https://wa.me/573124942672?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Automatizaci%C3%B3n%20con%20IA" class="price-cta" target="_blank">Solicitar información</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-icon">🏗️</div>
+        <div class="price-name">Proyecto completo</div>
+        <div class="price-amount">Desde <span>4M</span> COP</div>
+        <div class="price-time">Según alcance</div>
+        <ul class="price-items">
+          <li>Diagnóstico completo de datos</li>
+          <li>Arquitectura + BI + IA integrados</li>
+          <li>Implementación end-to-end</li>
+          <li>Soporte post-entrega incluido</li>
+        </ul>
+        <a href="https://wa.me/573124942672?text=Hola%2C%20me%20interesa%20un%20proyecto%20completo%20de%20datos%20e%20IA" class="price-cta" target="_blank">Agendar diagnóstico</a>
+      </div>
+    </div>
+    <p class="price-note">* Primera sesión de diagnóstico siempre sin costo.</p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     PROCESO
+══════════════════════════════════ -->
+<section class="section" id="proceso">
+  <div class="inner">
+    <span class="stag">Cómo trabajo</span>
+    <h2 class="stitle">Del problema al sistema<br><em>en producción.</em></h2>
+
+    <div class="proc-grid">
+      <div class="proc-step">
+        <div class="proc-num">01</div>
+        <div class="proc-dot" style="background:var(--accent)"></div>
+        <h4 class="proc-title">Diagnóstico</h4>
+        <p class="proc-desc">Entendemos tu situación actual: qué datos tienes, qué procesos son manuales y qué decisiones necesitas tomar mejor.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">02</div>
+        <div class="proc-dot" style="background:var(--teal)"></div>
+        <h4 class="proc-title">Diseño</h4>
+        <p class="proc-desc">Definimos arquitectura, KPIs y roadmap. Apruebas todo antes de que escribamos una línea de código.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">03</div>
+        <div class="proc-dot" style="background:var(--coral)"></div>
+        <h4 class="proc-title">Construcción</h4>
+        <p class="proc-desc">Desarrollo iterativo con entregas parciales. Ves avances reales en cada etapa, no al final del proyecto.</p>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">04</div>
+        <div class="proc-dot" style="background:var(--amber)"></div>
+        <h4 class="proc-title">Entrega</h4>
+        <p class="proc-desc">Deploy en producción, documentación completa y capacitación. Tu equipo queda empoderado para operar la solución.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     TESTIMONIOS
+══════════════════════════════════ -->
+<section class="section section--alt" id="testimonios">
+  <div class="inner">
+    <span class="stag">Lo que dicen</span>
+    <h2 class="stitle">Clientes que ya<br><em>tomaron el salto.</em></h2>
+
+    <!-- Cards rendered by ui.js -->
+    <div class="testi-grid" id="testi-grid"></div>
+
+    <button class="testi-add-btn" id="testi-add-btn">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M8 2v12M2 8h12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      Dejar una recomendación
+    </button>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     CTA FINAL
+══════════════════════════════════ -->
+<section class="section" id="contacto">
+  <div class="cta-glow"></div>
+  <div class="cta-inner">
+    <h2 class="cta-title">¿Sigues operando con<br><em>datos dispersos?</em></h2>
+    <p class="cta-promise"><strong>En 30 minutos te digo exactamente</strong> cómo organizar tus datos y automatizar tu operación con IA.</p>
+    <p class="cta-detail">Sin tecnicismos. Sin compromiso. Con un diagnóstico real de tu situación.</p>
+
+    <div class="cta-actions">
+      <a href="https://wa.me/573124942672?text=Hola%20Juan%20Camilo%2C%20quiero%20los%2030%20minutos%20de%20diagn%C3%B3stico%20gratuito"
+         class="btn btn--wa" target="_blank">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Quiero mi diagnóstico gratuito
+      </a>
+      <a href="mailto:contacto.dlogia@gmail.com" class="btn btn--ghost">Prefiero email</a>
+    </div>
+
+    <div class="contact-row">
+      <a href="tel:+573124942672" class="contact-item">
+        <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><path d="M1 1.5A.5.5 0 011.5 1h2a.5.5 0 01.491.41l.5 3a.5.5 0 01-.274.536L3.03 5.8a7.5 7.5 0 003.17 3.17l.854-1.187a.5.5 0 01.536-.274l3 .5A.5.5 0 0111 8.5v2a.5.5 0 01-.5.5A9.5 9.5 0 011 1.5z" fill="currentColor" opacity=".5"/></svg>
+        +57 312 494 2672
+      </a>
+      <a href="https://github.com/Juancanchala" class="contact-item" target="_blank">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" opacity=".5"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        github.com/Juancanchala
+      </a>
+      <span class="contact-item">Medellín · Colombia</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════
+     FOOTER
+══════════════════════════════════ -->
+<footer>
+  <div class="f-logo">D<span class="apostrophe">'</span>LOGIA</div>
+  <div class="f-copy">© 2025 D'LOGIA · Datos, Lógica & Inteligencia Artificial</div>
+</footer>
+
+
+<!-- ══════════════════════════════════
+     AI CHAT WIDGET
+══════════════════════════════════ -->
+<button id="chat-btn" aria-label="Abrir asistente">
+  <div class="notif"></div>
+  <!-- Chat icon -->
+  <svg class="icon-chat" width="22" height="22" viewBox="0 0 24 24" fill="none">
+    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <!-- Close icon -->
+  <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none">
+    <path d="M18 6L6 18M6 6l12 12" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+  </svg>
+</button>
+
+<div id="chat-window">
+  <div class="chat-header">
+    <div class="chat-avatar">DL</div>
+    <div class="chat-header-info">
+      <div class="chat-header-name">Asistente D'LOGIA</div>
+      <div class="chat-header-status">En línea</div>
+    </div>
+  </div>
+  <div class="chat-messages" id="chat-messages"></div>
+  <div class="chat-input-area">
+    <textarea id="chat-input" placeholder="Escribe tu pregunta..." rows="1"></textarea>
+    <button id="chat-send" aria-label="Enviar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+        <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════
+     MODAL — Dejar recomendación
+══════════════════════════════════ -->
+<div id="modal-overlay">
+  <div id="modal">
+    <h3 class="modal-title">Deja tu recomendación</h3>
+    <p class="modal-sub">Tu experiencia ayuda a otros a tomar la decisión.</p>
+
+    <form class="modal-form" id="testi-form">
+      <div class="form-row">
+        <input class="form-field" type="text" name="name" placeholder="Tu nombre *" required>
+        <input class="form-field" type="text" name="role" placeholder="Cargo · Empresa">
+      </div>
+      <textarea class="form-field" name="message" placeholder="¿Qué problema resolvimos juntos? ¿Cuál fue el resultado? *" required></textarea>
+
+      <div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">Calificación</div>
+        <div class="star-picker">
+          <span class="star-pick active" data-val="1">★</span>
+          <span class="star-pick active" data-val="2">★</span>
+          <span class="star-pick active" data-val="3">★</span>
+          <span class="star-pick active" data-val="4">★</span>
+          <span class="star-pick active" data-val="5">★</span>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="modal-cancel" id="modal-cancel">Cancelar</button>
+        <button type="submit" class="modal-submit">Publicar recomendación</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<!-- Scripts (ES modules) -->
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>

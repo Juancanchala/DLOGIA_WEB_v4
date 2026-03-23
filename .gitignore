@@ -1,0 +1,18 @@
+# D'LOGIA — .gitignore
+
+# ⚠️ NUNCA subir config.js a repositorios públicos
+js/config.js
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Temp
+*.log
+
+# Local Netlify folder
+.netlify
