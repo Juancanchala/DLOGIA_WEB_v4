@@ -113,6 +113,15 @@
 }
 
 /* ── SERVICES ── */
+.section-bridge {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  margin-bottom: 18px;
+  opacity: 0.85;
+}
+
 .srv-subtitle {
   font-size: 16px;
   color: var(--muted);
