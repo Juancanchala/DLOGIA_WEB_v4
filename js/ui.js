@@ -193,7 +193,7 @@ function renderTestimonials() {
   grid.innerHTML = '';
   all.forEach(t => {
     const card = document.createElement('div');
-    card.className = 'testi-card reveal';
+    card.className = 'testi-card';
     card.innerHTML = `
       <div class="testi-stars">${'<span class="testi-star">★</span>'.repeat(t.stars)}</div>
       <p class="testi-text">"${t.text}"</p>
