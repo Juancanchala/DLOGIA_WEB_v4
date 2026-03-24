@@ -673,3 +673,44 @@ footer {
   footer { flex-direction: column; gap: 10px; text-align: center; padding: 20px; }
   #cta { padding: 72px 20px; }
 }
+
+@media (max-width: 600px) {
+  /* About */
+  .about-grid { gap: 32px; margin-top: 36px; }
+  .avatar-frame { width: 160px; height: 200px; margin: 0 auto; }
+  .avatar-initials { font-size: 40px; }
+  .about-lead { font-size: 15px; }
+  .achv-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .achv { padding: 12px; }
+  .achv__num { font-size: 20px; }
+  .about-pills { gap: 6px; }
+  .about-socials { flex-direction: row; flex-wrap: wrap; gap: 8px; }
+  .about-social-btn { flex: 1; min-width: 120px; justify-content: center; }
+
+  /* Services */
+  .stitle { font-size: clamp(26px, 7vw, 36px); }
+  .srv-card { padding: 24px 18px; }
+
+  /* Process */
+  .proc-grid { grid-template-columns: 1fr; margin-top: 40px; gap: 16px; }
+  .proc-grid::before { display: none; }
+  .proc-step__num { margin: 0 auto 12px; }
+
+  /* Portfolio */
+  .pcard { min-height: 340px; }
+  .pcard__inner { min-height: 340px; }
+  .port-filters { gap: 6px; }
+  .fbtn { font-size: 11px; padding: 6px 12px; }
+
+  /* Testimonials */
+  .testi-card { padding: 20px 16px; }
+
+  /* CTA */
+  #cta { padding: 60px 18px; }
+  .cta-title { font-size: clamp(24px, 7vw, 36px); }
+  .cta-actions { flex-direction: column; align-items: stretch; gap: 10px; }
+
+  /* Footer */
+  .f-socials { justify-content: center; }
+  footer { padding: 24px 18px; gap: 14px; }
+}
