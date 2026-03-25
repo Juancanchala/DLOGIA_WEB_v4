@@ -543,17 +543,24 @@
 
 /* ── TESTIMONIALS ── */
 .testi-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: 16px;
   margin-top: 52px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 12px;
+  scrollbar-width: none;
 }
+.testi-grid::-webkit-scrollbar { display: none; }
 .testi-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   padding: 24px;
   transition: border-color var(--t-base);
+  flex: 0 0 340px;
+  scroll-snap-align: start;
 }
 .testi-card:hover { border-color: var(--borderH); }
 .testi-stars { display: flex; gap: 3px; margin-bottom: 14px; }
@@ -703,7 +710,7 @@ footer {
   .price-grid { grid-template-columns: 1fr; }
   .proc-grid { grid-template-columns: 1fr 1fr; margin-top: 80px; }
   .proc-grid::before { left: calc(25% - 1px); right: calc(25% - 1px); }
-  .testi-grid { grid-template-columns: 1fr; }
+  .testi-card { flex: 0 0 280px; }
   .achv-grid { grid-template-columns: repeat(3, 1fr); }
   footer { flex-direction: column; gap: 10px; text-align: center; padding: 20px; }
   #cta { padding: 72px 20px; }
