@@ -281,6 +281,31 @@
 }
 #chat-input:focus { border-color: var(--accent); }
 #chat-input::placeholder { color: var(--dim); }
+#chat-mic {
+  width: 36px; height: 36px;
+  border-radius: 9px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all var(--t-fast);
+}
+#chat-mic:hover { border-color: var(--accent); color: var(--accent); }
+#chat-mic.recording {
+  background: rgba(239,68,68,0.12);
+  border-color: #ef4444;
+  color: #ef4444;
+  animation: mic-pulse 1.2s infinite;
+}
+@keyframes mic-pulse {
+  0%,100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.4); }
+  50%      { box-shadow: 0 0 0 6px rgba(239,68,68,0); }
+}
+
 #chat-send {
   width: 36px; height: 36px;
   border-radius: 9px;

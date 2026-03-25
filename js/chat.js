@@ -49,7 +49,7 @@ let isOpen = false;
 let isTyping = false;
 
 // ── DOM refs (resolved after DOMContentLoaded) ──
-let chatBtn, chatWindow, chatMessages, chatInput, chatSend;
+let chatBtn, chatWindow, chatMessages, chatInput, chatSend, chatMic;
 
 // ── Init ───────────────────────────────────
 export function initChat() {
@@ -58,8 +58,11 @@ export function initChat() {
   chatMessages = document.getElementById('chat-messages');
   chatInput    = document.getElementById('chat-input');
   chatSend     = document.getElementById('chat-send');
+  chatMic      = document.getElementById('chat-mic');
 
   if (!chatBtn) return;
+
+  if (chatMic) chatMic.addEventListener('click', toggleMic);
 
   // Load history from localStorage (only if version matches)
   const saved = localStorage.getItem('dlogia_chat');
@@ -274,4 +277,43 @@ function saveHistory() {
       lead: leadData,
     }));
   } catch(e) { /* quota exceeded — ignore */ }
+}
+
+// ── Voice input ─────────────────────────────
+let _recognition = null;
+let _isRecording  = false;
+
+function _initSpeech() {
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (!SR) return null;
+  const r = new SR();
+  r.lang = 'es-ES';
+  r.continuous = false;
+  r.interimResults = false;
+  r.onresult = (e) => {
+    chatInput.value = e.results[0][0].transcript;
+    chatInput.style.height = 'auto';
+    chatInput.style.height = Math.min(chatInput.scrollHeight, 100) + 'px';
+    handleSend();
+  };
+  r.onend = r.onerror = () => {
+    _isRecording = false;
+    chatMic?.classList.remove('recording');
+  };
+  return r;
+}
+
+function toggleMic() {
+  if (!_recognition) _recognition = _initSpeech();
+  if (!_recognition) {
+    renderMessage('bot', 'Tu navegador no soporta voz. Usa Chrome o Edge.', true);
+    return;
+  }
+  if (_isRecording) {
+    _recognition.stop();
+  } else {
+    _isRecording = true;
+    chatMic?.classList.add('recording');
+    _recognition.start();
+  }
 }
