@@ -375,6 +375,7 @@
 .thumb--purple { background: linear-gradient(135deg, #18082e, #200f42); }
 .thumb--teal   { background: linear-gradient(135deg, #041a18, #083028); }
 .thumb--orange { background: linear-gradient(135deg, #1a0c04, #2a1406); }
+.thumb--gold   { background: linear-gradient(135deg, #1a1200, #2e1f00); }
 
 /* ── PRICING ── */
 .price-grid {

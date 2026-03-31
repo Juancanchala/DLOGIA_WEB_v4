@@ -412,29 +412,30 @@
         </div>
       </div>
 
-      <!-- Card 5 — Gold Analytics -->
+      <!-- Card 5 — AURUM Gold Market Monitor -->
       <div class="pcard" data-type="data">
         <div class="pcard__inner">
           <div class="pcard__front">
-            <div class="pcard__thumb thumb--purple">
-              <div class="pcard__bg-text">GOLD</div>
-              <span class="pcard__impact">Demo en vivo</span>
+            <div class="pcard__thumb thumb--gold">
+              <div class="pcard__bg-text">AURUM</div>
+              <span class="pcard__impact">En producción</span>
               <span class="pcard__type">Data Engineering</span>
             </div>
             <div class="pcard__body">
-              <h4 class="pcard__title">Gold Analytics System</h4>
+              <h4 class="pcard__title">AURUM — Gold Market Monitor</h4>
               <div class="psr">
-                <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">Datos del mercado del oro dispersos sin análisis centralizado</span></div>
-                <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">Pipeline end-to-end: extracción, transformación y visualización</span></div>
-                <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Sistema en producción con <strong>insights en tiempo real</strong></span></div>
+                <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">Sin forma de monitorear precios del oro en tiempo real con análisis automatizado</span></div>
+                <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">Pipeline event-driven: Kafka/Redpanda → PostgreSQL → FastAPI + IA</span></div>
+                <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Dashboard en producción con <strong>predicción ML y agente de voz</strong></span></div>
               </div>
-              <div class="ptags"><span class="ptag">Python</span><span class="ptag">ETL</span><span class="ptag">Analytics</span></div>
+              <div class="ptags"><span class="ptag">Kafka</span><span class="ptag">FastAPI</span><span class="ptag">OpenAI</span></div>
             </div>
           </div>
           <div class="pcard__back">
-            <p class="pcard__back-title">Gold Analytics — Detalles técnicos</p>
-            <p class="pcard__back-desc">Pipeline de datos end-to-end para análisis del mercado del oro. Extracción de fuentes externas, transformación y visualización con dashboards en tiempo real.</p>
-            <div class="pcard__back-stack"><span class="ptag">Python</span><span class="ptag">ETL</span><span class="ptag">Pandas</span><span class="ptag">Power BI</span><span class="ptag">PostgreSQL</span></div>
+            <p class="pcard__back-title">AURUM — Detalles técnicos</p>
+            <p class="pcard__back-desc">Pipeline de datos end-to-end con arquitectura event-driven. Producer publica ticks de oro cada 10s a Redpanda Cloud. Consumer calcula métricas en tiempo real y genera insights con GPT-4o-mini. Dashboard con predicción ML (Linear Regression + Random Forest), calculadora de rentabilidad, conversor USD/COP/EUR y agente de voz con Whisper.</p>
+            <div class="pcard__back-stack"><span class="ptag">Python</span><span class="ptag">Kafka</span><span class="ptag">PostgreSQL</span><span class="ptag">FastAPI</span><span class="ptag">OpenAI</span><span class="ptag">scikit-learn</span><span class="ptag">Railway</span></div>
+            <a href="https://aurum.up.railway.app" target="_blank" class="pcard__demo-btn">Ver demo en vivo →</a>
           </div>
         </div>
       </div>
