@@ -709,24 +709,19 @@
       <div class="chat-header-name">Asistente D'LOGIA</div>
       <div class="chat-header-status">En línea</div>
     </div>
-  </div>
-  <div class="chat-messages" id="chat-messages"></div>
-  <div class="chat-input-area">
-    <button id="chat-mic" aria-label="Hablar" title="Hablar">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <rect x="9" y="2" width="6" height="12" rx="3"/>
-        <path d="M5 10a7 7 0 0 0 14 0"/>
-        <line x1="12" y1="17" x2="12" y2="21" stroke-linecap="round"/>
-        <line x1="9" y1="21" x2="15" y2="21" stroke-linecap="round"/>
-      </svg>
-    </button>
-    <textarea id="chat-input" placeholder="Escribe tu pregunta..." rows="1"></textarea>
-    <button id="chat-send" aria-label="Enviar">
+    <button id="chat-close" aria-label="Cerrar chat">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-        <path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
       </svg>
     </button>
   </div>
+  <iframe
+    id="chat-iframe"
+    src=""
+    data-src="https://web-production-34bff.up.railway.app"
+    title="Asistente D'LOGIA"
+    allow="microphone"
+  ></iframe>
 </div>
 
 
