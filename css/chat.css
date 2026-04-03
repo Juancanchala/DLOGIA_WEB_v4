@@ -74,65 +74,6 @@
   pointer-events: all;
 }
 
-/* ── Header ── */
-.chat-header {
-  padding: 14px 16px;
-  border-bottom: 1px solid var(--border);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: var(--surface);
-  flex-shrink: 0;
-}
-.chat-avatar {
-  width: 34px; height: 34px;
-  border-radius: 50%;
-  background: var(--accentL);
-  border: 1px solid rgba(108,99,255,0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  flex-shrink: 0;
-}
-.chat-header-info { flex: 1; }
-.chat-header-name {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text);
-  line-height: 1;
-  margin-bottom: 3px;
-}
-.chat-header-status {
-  font-size: 11px;
-  color: var(--teal);
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-.chat-header-status::before {
-  content: '';
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: var(--teal);
-}
-
-/* Close button inside header */
-#chat-close {
-  width: 28px; height: 28px;
-  border-radius: 8px;
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--muted);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: all var(--t-fast);
-}
-#chat-close:hover { border-color: var(--borderH); color: var(--text); background: var(--bg3); }
-
 /* ── Iframe ── */
 #chat-iframe {
   flex: 1;

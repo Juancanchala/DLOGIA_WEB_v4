@@ -10,12 +10,10 @@ export function initChat() {
   const chatBtn    = document.getElementById('chat-btn');
   const chatWindow = document.getElementById('chat-window');
   const chatIframe = document.getElementById('chat-iframe');
-  const chatClose  = document.getElementById('chat-close');
 
   if (!chatBtn) return;
 
-  chatBtn.addEventListener('click',   () => toggle(chatBtn, chatWindow, chatIframe));
-  chatClose?.addEventListener('click', () => toggle(chatBtn, chatWindow, chatIframe));
+  chatBtn.addEventListener('click', () => toggle(chatBtn, chatWindow, chatIframe));
 }
 
 function toggle(chatBtn, chatWindow, chatIframe) {
