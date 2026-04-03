@@ -1,0 +1,306 @@
+/* ═══════════════════════════════════════════
+   D'LOGIA — Hero Agent Preview Widget
+   agent-preview.css
+═══════════════════════════════════════════ */
+
+/* ── Desktop: fixed right panel ─────────── */
+#agent-preview {
+  position: fixed;
+  right: 28px;
+  top: 50%;
+  transform: translateY(-50%) translateX(32px);
+  width: 272px;
+  z-index: 100;
+  background: rgba(9, 9, 14, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(108, 99, 255, 0.32);
+  border-radius: var(--r-xl);
+  padding: 20px;
+  box-shadow:
+    0 0 0 1px rgba(108, 99, 255, 0.07),
+    0 28px 56px rgba(0, 0, 0, 0.7),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.5s ease,
+    transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Glowing top edge */
+#agent-preview::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 20%; right: 20%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(108, 99, 255, 0.8) 50%,
+    transparent 100%);
+  border-radius: 1px;
+}
+
+#agent-preview.ap-visible {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+  pointer-events: all;
+}
+
+/* Only show on wide viewports to avoid overlap with hero content */
+@media (max-width: 1279px) {
+  #agent-preview { display: none; }
+}
+
+/* ── Label ─────────────────────────────── */
+.ap-label {
+  font-family: var(--fd);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.ap-label::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: ap-dot-pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes ap-dot-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.3; transform: scale(0.55); }
+}
+
+/* ── Chat simulation ────────────────────── */
+.ap-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  min-height: 118px;
+}
+
+.ap-msg {
+  display: flex;
+  align-items: flex-end;
+  gap: 7px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.ap-msg.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.ap-msg--user { flex-direction: row-reverse; }
+
+.ap-avatar {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--accentL);
+  border: 1px solid rgba(108, 99, 255, 0.22);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.ap-bubble {
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 8px 11px;
+  border-radius: 13px;
+  max-width: 196px;
+  transition: opacity 0.18s ease;
+}
+.ap-msg--bot .ap-bubble {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  color: var(--text);
+  border-bottom-left-radius: 4px;
+}
+.ap-msg--user .ap-bubble {
+  background: var(--accent);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+
+/* Blinking cursor on last bot message */
+#apm-3 .ap-bubble::after {
+  content: '▋';
+  font-size: 10px;
+  margin-left: 2px;
+  color: var(--teal);
+  animation: ap-cursor 0.9s step-end infinite;
+}
+@keyframes ap-cursor {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ── Industry chips ─────────────────────── */
+.ap-industries {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.ap-ind {
+  font-family: var(--fb);
+  font-size: 11px;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--r-sm);
+  color: var(--muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: border-color var(--t-fast), background var(--t-fast), color var(--t-fast);
+  text-align: left;
+}
+.ap-ind span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ap-ind:hover {
+  border-color: rgba(108, 99, 255, 0.35);
+  color: var(--text);
+}
+.ap-ind.active {
+  border-color: rgba(108, 99, 255, 0.55);
+  background: var(--accentL);
+  color: var(--text);
+}
+
+/* ── CTA button ─────────────────────────── */
+.ap-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 16px;
+  background: linear-gradient(135deg, #6c63ff 0%, #5550e8 100%);
+  border-radius: var(--r-sm);
+  color: #fff;
+  font-family: var(--fb);
+  font-size: 13px;
+  font-weight: 500;
+  transition: filter var(--t-base), transform var(--t-fast);
+}
+.ap-cta:hover {
+  filter: brightness(1.14);
+  transform: translateY(-1px);
+}
+.ap-cta:hover .ap-cta-arrow { transform: translateX(3px); }
+.ap-cta-arrow { transition: transform var(--t-fast); }
+
+/* ── Powered line ───────────────────────── */
+.ap-powered {
+  text-align: center;
+  font-size: 9.5px;
+  color: var(--dim);
+  margin-top: 11px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+/* ══════════════════════════════════════════
+   Mobile: compact sticky bottom banner
+══════════════════════════════════════════ */
+#agent-preview-mobile {
+  display: none;
+  position: fixed;
+  bottom: 96px;
+  left: 0; right: 0;
+  z-index: 100;
+  padding: 10px 16px;
+  background: rgba(9, 9, 14, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(108, 99, 255, 0.22);
+  align-items: center;
+  gap: 12px;
+  /* entrance */
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+}
+#agent-preview-mobile.ap-visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 1279px) {
+  #agent-preview-mobile { display: flex; }
+}
+
+.apm-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+}
+.apm-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  animation: ap-dot-pulse 2s ease-in-out infinite;
+}
+.apm-text {
+  font-size: 12.5px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.apm-text strong { font-weight: 500; }
+.apm-badge {
+  font-size: 10px;
+  padding: 2px 7px;
+  background: var(--accentL);
+  border: 1px solid rgba(108, 99, 255, 0.3);
+  border-radius: var(--r-pill);
+  color: var(--accent);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.apm-btn {
+  font-family: var(--fb);
+  font-size: 12.5px;
+  font-weight: 500;
+  padding: 7px 14px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: var(--r-sm);
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background var(--t-fast);
+}
+.apm-btn:hover { background: var(--accentH); }
+
+@media (max-width: 600px) {
+  #agent-preview-mobile {
+    bottom: 96px;
+    padding: 9px 14px;
+  }
+  .apm-badge { display: none; }
+}

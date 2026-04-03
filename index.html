@@ -21,6 +21,7 @@
   <link rel="stylesheet" href="css/hero.css?v=5">
   <link rel="stylesheet" href="css/sections.css?v=5">
   <link rel="stylesheet" href="css/chat.css?v=5">
+  <link rel="stylesheet" href="css/agent-preview.css?v=1">
 </head>
 <body>
 
@@ -671,6 +672,72 @@
   </div>
   <div class="f-copy">© 2025 D'LOGIA · Datos, Lógica & Inteligencia Artificial</div>
 </footer>
+
+
+<!-- ══════════════════════════════════
+     HERO AGENT PREVIEW WIDGET
+══════════════════════════════════ -->
+
+<!-- Desktop: fixed right panel -->
+<div id="agent-preview">
+  <div class="ap-label">SIMULA TU AGENTE</div>
+
+  <div class="ap-chat">
+    <div class="ap-msg ap-msg--bot" id="apm-1">
+      <span class="ap-avatar">🤖</span>
+      <div class="ap-bubble">¡Hola! ¿Qué tipo de negocio tienes?</div>
+    </div>
+    <div class="ap-msg ap-msg--user" id="apm-2">
+      <div class="ap-bubble">Tengo una clínica dental</div>
+    </div>
+    <div class="ap-msg ap-msg--bot" id="apm-3">
+      <span class="ap-avatar">🤖</span>
+      <div class="ap-bubble">Perfecto 🦷 Agendo citas, FAQ y recordatorios automáticos</div>
+    </div>
+  </div>
+
+  <div class="ap-industries">
+    <button class="ap-ind" data-i="barberia"
+      data-user="Tengo una barbería"
+      data-bot="¡Genial ✂️ Gestiono citas y disponibilidad en tiempo real!">
+      ✂️ <span>Barbería</span>
+    </button>
+    <button class="ap-ind active" data-i="dental"
+      data-user="Tengo una clínica dental"
+      data-bot="Perfecto 🦷 Agendo citas, FAQ y recordatorios automáticos">
+      🦷 <span>Dental</span>
+    </button>
+    <button class="ap-ind" data-i="retail"
+      data-user="Tengo una tienda online"
+      data-bot="¡Excelente 🛍️ Tu agente atiende pedidos y consultas 24/7!">
+      🛍️ <span>Retail</span>
+    </button>
+    <button class="ap-ind" data-i="empresas"
+      data-user="Tenemos 200 empleados"
+      data-bot="Ideal 🏢 Automatizo onboarding, soporte TI e intranets">
+      🏢 <span>Empresas</span>
+    </button>
+  </div>
+
+  <a id="ap-cta" href="agentes/dlogia-agent-studio.html?industry=dental" target="_blank" class="ap-cta">
+    Simula tu agente
+    <svg class="ap-cta-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none">
+      <path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+
+  <div class="ap-powered">D'LOGIA · AI Agent Studio</div>
+</div>
+
+<!-- Mobile: sticky bottom banner -->
+<div id="agent-preview-mobile">
+  <div class="apm-left">
+    <div class="apm-dot"></div>
+    <div class="apm-text"><strong>Simula tu agente</strong> · Barbería, Dental, Retail&hellip;</div>
+  </div>
+  <span class="apm-badge">DEMO LIVE</span>
+  <a href="agentes/dlogia-agent-studio.html" target="_blank" class="apm-btn">Probar →</a>
+</div>
 
 
 <!-- ══════════════════════════════════

@@ -3,8 +3,9 @@
    main.js
 ═══════════════════════════════════════════ */
 
-import { initParticles } from './particles.js';
-import { initChat }      from './chat.js';
+import { initParticles }    from './particles.js';
+import { initChat }          from './chat.js';
+import { initAgentPreview }  from './agent-preview.js';
 import { initNav, initReveal, initCounters, initFilters, initTestimonials } from './ui.js';
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,4 +16,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initFilters();
   initTestimonials();
   initChat();
+  initAgentPreview();
 });
