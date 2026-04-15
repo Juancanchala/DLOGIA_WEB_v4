@@ -293,7 +293,35 @@
 
     <div class="port-grid">
 
-      <!-- Card 1 — Fintrack -->
+      <!-- Card 1 — LogiLake -->
+      <div class="pcard" data-type="data">
+        <div class="pcard__inner">
+          <div class="pcard__front">
+            <div class="pcard__thumb thumb--teal">
+              <div class="pcard__bg-text">Lakehouse</div>
+              <span class="pcard__impact">1.5M de datos</span>
+              <span class="pcard__type">Data Engineering</span>
+            </div>
+            <div class="pcard__body">
+              <h4 class="pcard__title">LogiLake — E-commerce Analytics</h4>
+              <div class="psr">
+                <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">1.55M órdenes en 9 CSVs sin arquitectura para análisis logístico y comercial</span></div>
+                <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">Pipeline medallion Bronze→Silver→Gold con PySpark + agente SQL con GPT-4o</span></div>
+                <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">KPIs de OTIF, revenue y calidad con <strong>consultas en lenguaje natural</strong></span></div>
+              </div>
+              <div class="ptags"><span class="ptag">PySpark</span><span class="ptag">Delta Lake</span><span class="ptag">DuckDB</span></div>
+            </div>
+          </div>
+          <div class="pcard__back">
+            <p class="pcard__back-title">LogiLake — Detalles técnicos</p>
+            <p class="pcard__back-desc">Arquitectura Lakehouse medallion end-to-end: ingesta de 9 CSVs Olist (1.55M filas) con PySpark batch, limpieza y quality checks en Silver, KPIs agregados en Gold y serving layer CSV. Dashboard con Chart.js + D3 (mapa Brasil), DuckDB WASM para SQL en el browser y agente GPT-4o que convierte lenguaje natural a SQL.</p>
+            <div class="pcard__back-stack"><span class="ptag">PySpark</span><span class="ptag">Delta Lake</span><span class="ptag">DuckDB WASM</span><span class="ptag">GPT-4o</span><span class="ptag">Chart.js</span><span class="ptag">D3</span><span class="ptag">Netlify</span></div>
+            <a href="https://logilake.netlify.app/" target="_blank" class="pcard__demo-btn">Ver demo en vivo →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 — Fintrack (IA) -->
       <div class="pcard" data-type="ia">
         <div class="pcard__inner">
           <div class="pcard__front">
@@ -496,6 +524,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
