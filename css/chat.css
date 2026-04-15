@@ -7,7 +7,7 @@
 #chat-btn {
   position: fixed;
   bottom: 28px;
-  right: 28px;
+  right: 74px;
   z-index: 300;
   width: 54px;
   height: 54px;
@@ -52,7 +52,7 @@
 #chat-window {
   position: fixed;
   bottom: 96px;
-  right: 28px;
+  right: 74px;
   z-index: 299;
   width: 400px;
   height: 620px;

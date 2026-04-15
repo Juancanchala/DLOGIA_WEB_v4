@@ -3,6 +3,114 @@
    sections.css
 ═══════════════════════════════════════════ */
 
+
+/* ── TECH STACK TICKER ─────────────────── */
+.ticker-wrap {
+  position: relative;
+  width: 100%;
+  padding: 18px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.015);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+/* Fade edges */
+.ticker-wrap::before,
+.ticker-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  width: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+.ticker-wrap::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--bg) 0%, transparent 100%);
+}
+.ticker-wrap::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--bg) 0%, transparent 100%);
+}
+
+.ticker-label {
+  font-family: var(--fd);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--dim);
+  white-space: nowrap;
+  padding: 0 24px 0 28px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 3;
+}
+
+.ticker-overflow {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  width: max-content;
+  animation: ticker-scroll 35s linear infinite;
+}
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 28px;
+  border-right: 1px solid var(--border);
+  white-space: nowrap;
+  opacity: 0.55;
+  transition: opacity 0.2s ease;
+}
+.ticker-item:hover { opacity: 1; }
+
+.ti-icon {
+  display: block;
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  filter: invert(1) opacity(0.55);
+}
+/* Inline SVG icons: use color instead of filter */
+.ti-icon-svg {
+  filter: none;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.ticker-item span {
+  font-family: var(--fb);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+
+@media (max-width: 640px) {
+  .ticker-label { display: none; }
+  .ticker-item { padding: 0 20px; }
+}
+
 /* ── ABOUT ── */
 .about-grid {
   display: grid;
