@@ -377,6 +377,37 @@
 .thumb--orange { background: linear-gradient(135deg, #1a0c04, #2a1406); }
 .thumb--gold   { background: linear-gradient(135deg, #1a1200, #2e1f00); }
 
+/* bg-text size modifier for longer words */
+.pcard__bg-text--sm { font-size: 36px; }
+
+/* Featured card — gradient top line + star badge */
+.pcard--star {
+  border-color: rgba(108,99,255,0.28);
+}
+.pcard--star > .pcard__inner > .pcard__front > .pcard__thumb::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--teal));
+}
+.pcard__star {
+  position: absolute;
+  bottom: 10px; left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(108,99,255,0.12);
+  border: 1px solid rgba(108,99,255,0.3);
+  padding: 2px 8px;
+  border-radius: var(--r-pill);
+}
+
 /* ── PRICING ── */
 .price-grid {
   display: grid;

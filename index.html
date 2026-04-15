@@ -293,14 +293,15 @@
 
     <div class="port-grid">
 
-      <!-- Card 1 — LogiLake -->
-      <div class="pcard" data-type="data">
+      <!-- 1 ⭐ LogiLake -->
+      <div class="pcard pcard--star" data-type="data">
         <div class="pcard__inner">
           <div class="pcard__front">
             <div class="pcard__thumb thumb--teal">
-              <div class="pcard__bg-text">Lakehouse</div>
+              <div class="pcard__bg-text pcard__bg-text--sm">Lakehouse</div>
               <span class="pcard__impact">1.5M de datos</span>
               <span class="pcard__type">Data Engineering</span>
+              <span class="pcard__star">✦ Destacado</span>
             </div>
             <div class="pcard__body">
               <h4 class="pcard__title">LogiLake — E-commerce Analytics</h4>
@@ -321,14 +322,75 @@
         </div>
       </div>
 
-      <!-- Card 2 — Fintrack (IA) -->
-      <div class="pcard" data-type="ia">
+      <!-- 2 ⭐ CRM Inmobiliario -->
+      <div class="pcard pcard--star" data-type="ia">
+        <div class="pcard__inner">
+          <div class="pcard__front">
+            <div class="pcard__thumb thumb--teal">
+              <div class="pcard__bg-text">CRM</div>
+              <span class="pcard__impact">En producción</span>
+              <span class="pcard__type">IA</span>
+              <span class="pcard__star">✦ Destacado</span>
+            </div>
+            <div class="pcard__body">
+              <h4 class="pcard__title">CRM Inmobiliario con IA</h4>
+              <div class="psr">
+                <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">Gestión manual de leads sin visibilidad del pipeline de ventas</span></div>
+                <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">CRM completo con IA integrada para clasificar y priorizar leads</span></div>
+                <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Plataforma desplegada, <strong>pipeline 100% visible</strong></span></div>
+              </div>
+              <div class="ptags"><span class="ptag">React</span><span class="ptag">LLM</span><span class="ptag">Netlify</span></div>
+            </div>
+          </div>
+          <div class="pcard__back">
+            <p class="pcard__back-title">CRM IA — Detalles técnicos</p>
+            <p class="pcard__back-desc">CRM para inmobiliarias con clasificación automática de leads por IA. Pipeline de ventas visual, scoring de clientes y seguimiento inteligente de oportunidades.</p>
+            <div class="pcard__back-stack"><span class="ptag">React</span><span class="ptag">Python</span><span class="ptag">LLM</span><span class="ptag">FastAPI</span><span class="ptag">Netlify</span></div>
+            <a href="https://dlogia-crm-ai.netlify.app/" target="_blank" class="pcard__demo-btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Explorar proyecto
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 AURUM -->
+      <div class="pcard" data-type="data">
+        <div class="pcard__inner">
+          <div class="pcard__front">
+            <div class="pcard__thumb thumb--gold">
+              <div class="pcard__bg-text">AURUM</div>
+              <span class="pcard__impact">En producción</span>
+              <span class="pcard__type">Data Engineering</span>
+            </div>
+            <div class="pcard__body">
+              <h4 class="pcard__title">AURUM — Gold Market Monitor</h4>
+              <div class="psr">
+                <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">Sin forma de monitorear precios del oro en tiempo real con análisis automatizado</span></div>
+                <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">Pipeline event-driven: Kafka/Redpanda → PostgreSQL → FastAPI + IA</span></div>
+                <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Dashboard en producción con <strong>predicción ML y agente de voz</strong></span></div>
+              </div>
+              <div class="ptags"><span class="ptag">Kafka</span><span class="ptag">FastAPI</span><span class="ptag">OpenAI</span></div>
+            </div>
+          </div>
+          <div class="pcard__back">
+            <p class="pcard__back-title">AURUM — Detalles técnicos</p>
+            <p class="pcard__back-desc">Pipeline de datos end-to-end con arquitectura event-driven. Producer publica ticks de oro cada 10s a Redpanda Cloud. Consumer calcula métricas en tiempo real y genera insights con GPT-4o-mini. Dashboard con predicción ML (Linear Regression + Random Forest), calculadora de rentabilidad, conversor USD/COP/EUR y agente de voz con Whisper.</p>
+            <div class="pcard__back-stack"><span class="ptag">Python</span><span class="ptag">Kafka</span><span class="ptag">PostgreSQL</span><span class="ptag">FastAPI</span><span class="ptag">OpenAI</span><span class="ptag">scikit-learn</span><span class="ptag">Railway</span></div>
+            <a href="https://aurum.up.railway.app" target="_blank" class="pcard__demo-btn">Ver demo en vivo →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 ⭐ Fintrack -->
+      <div class="pcard pcard--star" data-type="ia">
         <div class="pcard__inner">
           <div class="pcard__front">
             <div class="pcard__thumb thumb--purple">
               <div class="pcard__bg-text">FIN</div>
               <span class="pcard__impact">Agente IA</span>
               <span class="pcard__type">IA</span>
+              <span class="pcard__star">✦ Destacado</span>
             </div>
             <div class="pcard__body">
               <h4 class="pcard__title">Fintrack — Finanzas Personales IA</h4>
@@ -352,7 +414,63 @@
         </div>
       </div>
 
-      <!-- Card 2 — Dilo English Coach -->
+      <!-- 5 Pipeline Salary -->
+      <div class="pcard" data-type="data">
+        <div class="pcard__inner">
+          <div class="pcard__front">
+            <div class="pcard__thumb thumb--purple">
+              <div class="pcard__bg-text">147K</div>
+              <span class="pcard__impact">147K+ registros</span>
+              <span class="pcard__type">Data Engineering</span>
+            </div>
+            <div class="pcard__body">
+              <h4 class="pcard__title">Pipeline Salary Analytics</h4>
+              <div class="psr">
+                <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">147K+ registros sin arquitectura para análisis escalable</span></div>
+                <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">Pipeline orquestado Airflow + PySpark + BigQuery</span></div>
+                <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Procesamiento <strong>enterprise listo para producción</strong></span></div>
+              </div>
+              <div class="ptags"><span class="ptag">Airflow</span><span class="ptag">PySpark</span><span class="ptag">BigQuery</span></div>
+            </div>
+          </div>
+          <div class="pcard__back">
+            <p class="pcard__back-title">Salary Analytics — Detalles técnicos</p>
+            <p class="pcard__back-desc">Pipeline orquestado con Apache Airflow para procesar 147K+ registros salariales. Transformación distribuida con PySpark y almacenamiento en BigQuery para análisis escalable.</p>
+            <div class="pcard__back-stack"><span class="ptag">Airflow</span><span class="ptag">PySpark</span><span class="ptag">BigQuery</span><span class="ptag">dbt</span><span class="ptag">GCP</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 6 CDC Kafka -->
+      <div class="pcard" data-type="data">
+        <div class="pcard__inner">
+          <div class="pcard__front">
+            <div class="pcard__thumb thumb--orange">
+              <div class="pcard__bg-text">CDC</div>
+              <span class="pcard__impact">Enterprise</span>
+              <span class="pcard__type">Data Engineering</span>
+            </div>
+            <div class="pcard__body">
+              <h4 class="pcard__title">CDC Real-time con Kafka</h4>
+              <div class="psr">
+                <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">Bases de datos sin sincronización en tiempo real entre sistemas</span></div>
+                <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">Change Data Capture con MySQL, Debezium y Kafka</span></div>
+                <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Sincronización <strong>enterprise de alta disponibilidad</strong></span></div>
+              </div>
+              <div class="ptags"><span class="ptag">Kafka</span><span class="ptag">MySQL</span><span class="ptag">CDC</span></div>
+            </div>
+          </div>
+          <div class="pcard__back">
+            <div class="pcard__back-title">Stack técnico</div>
+            <div class="pcard__back-tags">
+              <span class="ptag">MySQL</span><span class="ptag">Debezium</span><span class="ptag">Apache Kafka</span><span class="ptag">Docker</span><span class="ptag">Python</span>
+            </div>
+            <p class="pcard__back-detail">Arquitectura event-driven con Change Data Capture para sincronización de bases de datos en tiempo real. Alta disponibilidad y tolerancia a fallos para entornos enterprise.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 7 Dilo English Coach -->
       <div class="pcard" data-type="ia">
         <div class="pcard__inner">
           <div class="pcard__front">
@@ -383,38 +501,7 @@
         </div>
       </div>
 
-      <!-- Card 3 — CRM Inmobiliario -->
-      <div class="pcard" data-type="ia">
-        <div class="pcard__inner">
-          <div class="pcard__front">
-            <div class="pcard__thumb thumb--teal">
-              <div class="pcard__bg-text">CRM</div>
-              <span class="pcard__impact">En producción</span>
-              <span class="pcard__type">IA</span>
-            </div>
-            <div class="pcard__body">
-              <h4 class="pcard__title">CRM Inmobiliario con IA</h4>
-              <div class="psr">
-                <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">Gestión manual de leads sin visibilidad del pipeline de ventas</span></div>
-                <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">CRM completo con IA integrada para clasificar y priorizar leads</span></div>
-                <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Plataforma desplegada, <strong>pipeline 100% visible</strong></span></div>
-              </div>
-              <div class="ptags"><span class="ptag">React</span><span class="ptag">LLM</span><span class="ptag">Netlify</span></div>
-            </div>
-          </div>
-          <div class="pcard__back">
-            <p class="pcard__back-title">CRM IA — Detalles técnicos</p>
-            <p class="pcard__back-desc">CRM para inmobiliarias con clasificación automática de leads por IA. Pipeline de ventas visual, scoring de clientes y seguimiento inteligente de oportunidades.</p>
-            <div class="pcard__back-stack"><span class="ptag">React</span><span class="ptag">Python</span><span class="ptag">LLM</span><span class="ptag">FastAPI</span><span class="ptag">Netlify</span></div>
-            <a href="https://dlogia-crm-ai.netlify.app/" target="_blank" class="pcard__demo-btn">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              Explorar proyecto
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 — Facturación -->
+      <!-- 8 Facturación IA (sin demo) -->
       <div class="pcard" data-type="automatizacion">
         <div class="pcard__inner">
           <div class="pcard__front">
@@ -437,90 +524,6 @@
             <p class="pcard__back-title">Facturación IA — Detalles técnicos</p>
             <p class="pcard__back-desc">Pipeline de automatización que extrae datos de facturas con OCR, los valida con reglas de negocio y los carga automáticamente al sistema contable.</p>
             <div class="pcard__back-stack"><span class="ptag">Python</span><span class="ptag">FastAPI</span><span class="ptag">OCR</span><span class="ptag">Automation</span><span class="ptag">REST API</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5 — AURUM Gold Market Monitor -->
-      <div class="pcard" data-type="data">
-        <div class="pcard__inner">
-          <div class="pcard__front">
-            <div class="pcard__thumb thumb--gold">
-              <div class="pcard__bg-text">AURUM</div>
-              <span class="pcard__impact">En producción</span>
-              <span class="pcard__type">Data Engineering</span>
-            </div>
-            <div class="pcard__body">
-              <h4 class="pcard__title">AURUM — Gold Market Monitor</h4>
-              <div class="psr">
-                <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">Sin forma de monitorear precios del oro en tiempo real con análisis automatizado</span></div>
-                <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">Pipeline event-driven: Kafka/Redpanda → PostgreSQL → FastAPI + IA</span></div>
-                <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Dashboard en producción con <strong>predicción ML y agente de voz</strong></span></div>
-              </div>
-              <div class="ptags"><span class="ptag">Kafka</span><span class="ptag">FastAPI</span><span class="ptag">OpenAI</span></div>
-            </div>
-          </div>
-          <div class="pcard__back">
-            <p class="pcard__back-title">AURUM — Detalles técnicos</p>
-            <p class="pcard__back-desc">Pipeline de datos end-to-end con arquitectura event-driven. Producer publica ticks de oro cada 10s a Redpanda Cloud. Consumer calcula métricas en tiempo real y genera insights con GPT-4o-mini. Dashboard con predicción ML (Linear Regression + Random Forest), calculadora de rentabilidad, conversor USD/COP/EUR y agente de voz con Whisper.</p>
-            <div class="pcard__back-stack"><span class="ptag">Python</span><span class="ptag">Kafka</span><span class="ptag">PostgreSQL</span><span class="ptag">FastAPI</span><span class="ptag">OpenAI</span><span class="ptag">scikit-learn</span><span class="ptag">Railway</span></div>
-            <a href="https://aurum.up.railway.app" target="_blank" class="pcard__demo-btn">Ver demo en vivo →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 6 — Pipeline Salary -->
-      <div class="pcard" data-type="data">
-        <div class="pcard__inner">
-          <div class="pcard__front">
-            <div class="pcard__thumb thumb--purple">
-              <div class="pcard__bg-text">147K</div>
-              <span class="pcard__impact">147K+ registros</span>
-              <span class="pcard__type">Data Engineering</span>
-            </div>
-            <div class="pcard__body">
-              <h4 class="pcard__title">Pipeline Salary Analytics</h4>
-              <div class="psr">
-                <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">147K+ registros sin arquitectura para análisis escalable</span></div>
-                <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">Pipeline orquestado Airflow + PySpark + BigQuery</span></div>
-                <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Procesamiento <strong>enterprise listo para producción</strong></span></div>
-              </div>
-              <div class="ptags"><span class="ptag">Airflow</span><span class="ptag">PySpark</span><span class="ptag">BigQuery</span></div>
-            </div>
-          </div>
-          <div class="pcard__back">
-            <p class="pcard__back-title">Salary Analytics — Detalles técnicos</p>
-            <p class="pcard__back-desc">Pipeline orquestado con Apache Airflow para procesar 147K+ registros salariales. Transformación distribuida con PySpark y almacenamiento en BigQuery para análisis escalable.</p>
-            <div class="pcard__back-stack"><span class="ptag">Airflow</span><span class="ptag">PySpark</span><span class="ptag">BigQuery</span><span class="ptag">dbt</span><span class="ptag">GCP</span></div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 7 — CDC Kafka -->
-      <div class="pcard" data-type="data">
-        <div class="pcard__inner">
-          <div class="pcard__front">
-            <div class="pcard__thumb thumb--orange">
-              <div class="pcard__bg-text">CDC</div>
-              <span class="pcard__impact">Enterprise</span>
-              <span class="pcard__type">Data Engineering</span>
-            </div>
-            <div class="pcard__body">
-              <h4 class="pcard__title">CDC Real-time con Kafka</h4>
-              <div class="psr">
-                <div class="psr-row"><span class="psr-label psr-label--p">Problema</span><span class="psr-text">Bases de datos sin sincronización en tiempo real entre sistemas</span></div>
-                <div class="psr-row"><span class="psr-label psr-label--s">Solución</span><span class="psr-text">Change Data Capture con MySQL, Debezium y Kafka</span></div>
-                <div class="psr-row"><span class="psr-label psr-label--r">Resultado</span><span class="psr-text">Sincronización <strong>enterprise de alta disponibilidad</strong></span></div>
-              </div>
-              <div class="ptags"><span class="ptag">Kafka</span><span class="ptag">MySQL</span><span class="ptag">CDC</span></div>
-            </div>
-          </div>
-          <div class="pcard__back">
-            <div class="pcard__back-title">Stack técnico</div>
-            <div class="pcard__back-tags">
-              <span class="ptag">MySQL</span><span class="ptag">Debezium</span><span class="ptag">Apache Kafka</span><span class="ptag">Docker</span><span class="ptag">Python</span>
-            </div>
-            <p class="pcard__back-detail">Arquitectura event-driven con Change Data Capture para sincronización de bases de datos en tiempo real. Alta disponibilidad y tolerancia a fallos para entornos enterprise.</p>
           </div>
         </div>
       </div>
